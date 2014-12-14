@@ -13,7 +13,7 @@ namespace practical {
                     Genome* child1 = other.shallowCopy();
                     Genome* child2 = this->shallowCopy();
 
-                    for(int i = 0; i < crossoverPoint; i++) {
+                    for(int i = 0; i < crossoverPoint; i++) {^
                         child1->getGenes().push_back(this->getGenes()[i]);
                         child2->getGenes().push_back(other.getGenes()[i]);
                     }
@@ -21,13 +21,13 @@ namespace practical {
                     for(int i = 0; i < other.getGenes().size(); i++) {
                         bool contains = false;
                         for(int j = 0; j < child1->getGenes().size(); j++) {
-                            if(child1->getGenes()[j].getValue() == other.genes[i].getValue()) {
+                            if(child1->getGenes()[j].getValue() == other.getGenes()[i].getValue()) {
                                 contains = true;
                                 break;
                             }
                         }
                         if(!contains) {
-                            child1->getGenes().push_back(other.genes[i]);
+                            child1->getGenes().push_back(other.getGenes()[i]);
                         }
                     }
 
@@ -39,7 +39,7 @@ namespace practical {
                                 break;
                             }
                         }
-                        if(!contains) {
+                        if(!contains) {^
                             child2->getGenes().push_back(this->getGenes()[i]);
                         }
                     }

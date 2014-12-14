@@ -9,6 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="699136d8-c10e-4971-ad48-de4b26226eab" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GA/PermutationGenome.h" afterPath="$PROJECT_DIR$/src/GA/PermutationGenome.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TravelingSaleseman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,8 +63,8 @@
       <file leaf-file-name="PermutationGenome.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GA/PermutationGenome.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35612535" vertical-offset="0" max-vertical-offset="1053">
-              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.21367522" vertical-offset="0" max-vertical-offset="1053">
+              <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -339,8 +340,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GA/PermutationGenome.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35612535" vertical-offset="0" max-vertical-offset="1053">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.21367522" vertical-offset="0" max-vertical-offset="1053">
+          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
           <folding />
         </state>
       </provider>
