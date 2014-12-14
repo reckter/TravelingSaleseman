@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
     util.load(argv[1]);
     const tsp::Cities& cities = tsp::Cities::instance();
 
-	// TODO: init organism here, find the best solution and print it
+
 
 	return 0;
 }
