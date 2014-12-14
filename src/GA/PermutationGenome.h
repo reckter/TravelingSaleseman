@@ -13,7 +13,7 @@ namespace practical {
                     Genome* child1 = other.shallowCopy();
                     Genome* child2 = this->shallowCopy();
 
-                    for(int i = 0; i < crossoverPoint; i++) {^
+                    for(int i = 0; i < crossoverPoint; i++) {
                         child1->getGenes().push_back(this->getGenes()[i]);
                         child2->getGenes().push_back(other.getGenes()[i]);
                     }
