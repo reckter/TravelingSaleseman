@@ -8,39 +8,39 @@ namespace practical {
 
             public:
                 std::pair<Genome*, Genome*> crossover(const Genome& other) const {
-                    int crossoverPoint = util::randInt(other.genes.size(), 0);
+                    int crossoverPoint = util::randInt(other.getGenes().size(), 0);
 
-                    Genome* child1 = new Genome();
-                    Genome* child2 = new Genome();
+                    Genome* child1 = other.shallowCopy();
+                    Genome* child2 = this->shallowCopy();
 
                     for(int i = 0; i < crossoverPoint; i++) {
-                        child1->genes.push_back(this->genes[i]);
-                        child2->genes.push_back(other.genes[i]);
+                        child1->getGenes().push_back(this->getGenes()[i]);
+                        child2->getGenes().push_back(other.getGenes()[i]);
                     }
 
-                    for(int i = 0; i < other.genes.size(); i++) {
+                    for(int i = 0; i < other.getGenes().size(); i++) {
                         bool contains = false;
-                        for(int j = 0; j < child1->genes.size(); j++) {
-                            if(child1->genes[j].getValue() == other.genes[i].getValue()) {
+                        for(int j = 0; j < child1->getGenes().size(); j++) {
+                            if(child1->getGenes()[j].getValue() == other.genes[i].getValue()) {
                                 contains = true;
                                 break;
                             }
                         }
                         if(!contains) {
-                            child1->genes.push_back(other.genes[i]);
+                            child1->getGenes().push_back(other.genes[i]);
                         }
                     }
 
-                    for(int i = 0; i < this->genes.size(); i++) {
+                    for(int i = 0; i < this->getGenes().size(); i++) {
                         bool contains = false;
-                        for(int j = 0; j < child2->genes.size(); j++) {
-                            if(child2->genes[j].getValue() == this->genes[i].getValue()) {
+                        for(int j = 0; j < child2->getGenes().size(); j++) {
+                            if(child2->getGenes()[j].getValue() == this->getGenes()[i].getValue()) {
                                 contains = true;
                                 break;
                             }
                         }
                         if(!contains) {
-                            child2->genes.push_back(this->genes[i]);
+                            child2->getGenes().push_back(this->getGenes()[i]);
                         }
                     }
 
