@@ -11,6 +11,7 @@
 #include <numeric>
 #include <cmath>
 #include <iostream>
+#include <Foundation/Foundation.h>
 #include "Util.h"
 
 namespace practical {
@@ -99,10 +100,27 @@ const Genome* Organism::worst() const {
 }
 
 std::pair<Genome*, Genome*> Organism::selectParents() {
+	std::deque<Genome*> tempGenome;
+	for(int i = 0; i < 6 && i < genomes.size(); i++) {
+		tempGenome.push_front(getRandomGenome());
+	}
+	std::sort(tempGenome.begin(), tempGenome.end(), GenomeCmp());
+	std::pair<Genome* , Genome*> ret;
+	ret.first = *(tempGenome.begin());
+	ret.second = *(tempGenome.begin()++);
+
+	return ret;
 }
 
 Genome* Organism::getRandomGenome() {
-	int rand = randint(genomes.size());
+	int rand = util::randInt((int) genomes.size());
+	std::deque::iterator pointer = genomes.begin();
+	for(int i = 0; i < genomes.size(); i++) {
+		pointer++;
+		if(i == rand) {
+			return *pointer;
+		}
+	}
 }
 
 void Organism::sort() {

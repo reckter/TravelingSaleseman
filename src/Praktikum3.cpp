@@ -3,8 +3,9 @@
 // Group members	: 
 // Description 		: Third practical of GdI3. Solve the travelling salesman problem using genetic algorithm.
 //============================================================================
-
+/*
 #include "TSPOrganism.h"
+*/
 #include "TSPGenome.h"
 
 #include "Cities.h"
