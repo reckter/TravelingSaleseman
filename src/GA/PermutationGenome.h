@@ -39,7 +39,7 @@ namespace practical {
                                 break;
                             }
                         }
-                        if(!contains) {^
+                        if(!contains) {
                             child2->getGenes().push_back(this->getGenes()[i]);
                         }
                     }
@@ -49,6 +49,15 @@ namespace practical {
                     ret.second = child2;
 
                     return ret;
+                }
+
+                void mutate() {
+                    int a = util::randInt(this->genes.size(), 0);
+                    int b = util::randInt(this->genes.size(), 0);
+
+                    IntGene ig = this->genes[a];
+                    this->genes[a] = this->genes[b];
+                    this->genes[b] = ig;
                 }
 
         };

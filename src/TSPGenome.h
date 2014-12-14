@@ -6,14 +6,14 @@ class TSPGenome : public practical::ga::PermutationGenome {
         double fitness() const{
             tsp::Cities cities = tsp::Cities::instance();
             int distance = 0;
-            for(std::iterator<IntGene> pointer = genes.begin(); pointer + 1 != genes.end(); pointer++) {
-                distance += cities.distance(pointer, pointer + 1);
+            for(std::vector<practical::ga::IntGene>::const_iterator pointer = genes.begin(); pointer + 1 != genes.end(); pointer++) {
+                distance += cities.distance(pointer->getValue(), (pointer + 1)->getValue());
             }
-            distance += cities.distance(genes.end(), genes.begin());
+            distance += cities.distance((genes.end() - 1)->getValue(), genes.begin()->getValue());
             return 1 / (double) distance;
         }
 
-        Genome* shallowCopy(){
+        practical::ga::Genome* shallowCopy() const {
             return new TSPGenome();
         }
 };
