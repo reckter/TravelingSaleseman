@@ -13,6 +13,10 @@ namespace practical {
                 std::pair<Genome*, Genome*> crossover(const Genome& other) const {
                     int crossoverPoint = util::randInt(other.getGenes().size(), 0);
 
+//                    std::cout << "crossover: " << crossoverPoint << std::endl;
+//                    std::cout << "parent1: " << (*this) << std::endl;
+//                    std::cout << "parent2: " << other << std::endl;
+
                     Genome* child1 = other.shallowCopy();
                     Genome* child2 = this->shallowCopy();
 
@@ -50,6 +54,11 @@ namespace practical {
                     std::pair<Genome*, Genome*> ret;
                     ret.first = child1;
                     ret.second = child2;
+
+//                    std::cout << (*(ret.first)) << std::endl;
+//                    std::cout << (*(ret.second)) << std::endl;
+//
+//                    system("sleep 5");
 
                     return ret;
                 }

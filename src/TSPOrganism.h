@@ -39,16 +39,5 @@ public:
             genes = shuffleGene;
             shuffleGene.clear();
         }
-
-        std::string delim("");
-        for(std::deque<practical::ga::Genome*>::iterator i = this->genomes.begin(); i < this->genomes.end(); i++) {
-            std::cout << "[";
-            delim = "";
-            for(std::vector<practical::ga::IntGene>::const_iterator j = (*i)->getGenes().begin(); j < (*i)->getGenes().end(); j++) {
-                std::cout << delim << j->getValue();
-                delim = ", ";
-            }
-            std::cout << "]" << std::endl;
-        }
     }
 };

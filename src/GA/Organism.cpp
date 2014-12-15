@@ -82,6 +82,7 @@ void Organism::generate() {
 		);
 	}
 
+
 	clearGenomes();
 	genomes.swap(new_genomes);
 	sorted = true;
@@ -106,8 +107,8 @@ std::pair<Genome*, Genome*> Organism::selectParents() {
 	}
 	std::sort(tempGenome.begin(), tempGenome.end(), GenomeCmp());
 	std::pair<Genome* , Genome*> ret;
-	ret.first = *(tempGenome.begin());
-	ret.second = *(tempGenome.begin()++);
+	ret.first = *(tempGenome.end() - 1);
+	ret.second = *(tempGenome.end() - 2);
 
 	return ret;
 }

@@ -16,6 +16,7 @@
 
 #include <cstdlib>
 
+
 /*
 * Call like: ./praktikum3 myfile.txt 2000
 */
@@ -34,9 +35,19 @@ int main(int argc, char** argv) {
     const tsp::Cities& cities = tsp::Cities::instance();
 
     TSPOrganism organism;
-    organism.init(29);
-    organism.generate();
+    organism.init(1000);
+    for(int generations = 0; generations <= ga_iterations; generations++) {
+        organism.generate();
+        if(generations % 10 == 0) {
+            std::cout << "generation " << generations << ": ";
+            std::cout << *(organism.fittest()) << std::endl;
+        }
+    }
 
+    std::cout << *(organism.fittest()) << std::endl;
 
 	return 0;
 }
+
+
+

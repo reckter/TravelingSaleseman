@@ -71,7 +71,7 @@ std::ostream& operator<<(std::ostream& os, const Genome& genome) {
 	for (; iter < genome.getGenes().end() - 1; ++iter) {
 		os << *iter << " ";
 	}
-	return os << *iter << "]";
+	return os << *iter << "] " << 1.0 / genome.fitness();
 }
 
 }
