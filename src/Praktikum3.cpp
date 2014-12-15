@@ -33,8 +33,9 @@ int main(int argc, char** argv) {
     util.load(argv[1]);
     const tsp::Cities& cities = tsp::Cities::instance();
 
-    TSPOrganism *organism = new TSPOrganism(20);
-    organism->generate();
+    TSPOrganism organism;
+    organism.init(29);
+    organism.generate();
 
 
 	return 0;

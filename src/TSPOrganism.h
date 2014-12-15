@@ -11,8 +11,9 @@
 
 
 class TSPOrganism : public practical::ga::Organism {
+
 public:
-    TSPOrganism(unsigned int initial_size): Organism(initial_size) {
+    void init(unsigned int initial_size) {
 
         int genesSize = tsp::Cities::instance().getCities().size();
         std::vector<practical::ga::IntGene> genes;
