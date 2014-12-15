@@ -1,5 +1,8 @@
 
 
+#ifndef PERMUTATION_GENOME_H
+#define PERMUTATION_GENOME_H
+
 #include "Genome.h"
 
 namespace practical {
@@ -63,3 +66,6 @@ namespace practical {
         };
     }
 }
+
+
+#endif

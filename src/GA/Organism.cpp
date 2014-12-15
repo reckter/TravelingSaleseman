@@ -11,9 +11,9 @@
 #include <numeric>
 #include <cmath>
 #include <iostream>
-#include <Foundation/Foundation.h>
 #include "Util.h"
 
+class iterator;
 namespace practical {
 namespace ga {
 

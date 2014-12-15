@@ -3,9 +3,8 @@
 // Group members	: 
 // Description 		: Third practical of GdI3. Solve the travelling salesman problem using genetic algorithm.
 //============================================================================
-/*
-#include "TSPOrganism.h"
 
+#include "TSPOrganism.h"
 #include "TSPGenome.h"
 
 #include "Cities.h"
@@ -34,7 +33,9 @@ int main(int argc, char** argv) {
     util.load(argv[1]);
     const tsp::Cities& cities = tsp::Cities::instance();
 
-	// TODO: init organism here, find the best solution and print it
+    TSPOrganism *organism = new TSPOrganism(20);
+    organism->generate();
+
 
 	return 0;
 }

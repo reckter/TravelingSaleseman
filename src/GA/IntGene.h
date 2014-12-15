@@ -17,17 +17,17 @@
 #include <limits>
 
 namespace practical {
-namespace ga {
+    namespace ga {
 
-struct IntGeneMutator {
-	static inline void mutate(unsigned int& value) {
-		// never called, so leave empty
-	}
-};
+        struct IntGeneMutator {
+            static inline void mutate(unsigned int &value) {
+                // never called, so leave empty
+            }
+        };
 
-typedef Gene<unsigned int, IntGeneMutator> IntGene;
+        typedef Gene<unsigned int, IntGeneMutator> IntGene;
 
-} /* namespace ga */
+    } /* namespace ga */
 } /* namespace practical */
 
 #endif /* INTGENE_H_ */

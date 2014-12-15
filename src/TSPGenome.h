@@ -1,3 +1,7 @@
+
+#ifndef TSP_GENOME_H
+#define TSP_GENOME_H
+
 #include "Cities.h"
 #include "GA/PermutationGenome.h"
 
@@ -17,3 +21,5 @@ class TSPGenome : public practical::ga::PermutationGenome {
             return new TSPGenome();
         }
 };
+
+#endif
