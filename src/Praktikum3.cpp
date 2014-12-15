@@ -1,6 +1,6 @@
 //============================================================================
 // Name         	: Praktikum3.cpp
-// Group members	: 
+// Group members	:
 // Description 		: Third practical of GdI3. Solve the travelling salesman problem using genetic algorithm.
 //============================================================================
 
