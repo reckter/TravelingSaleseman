@@ -6,7 +6,6 @@
 #include <algorithm>
 #include <random>
 #include "GA/Util.h"
-#include "../../../../../Library/Developer/CommandLineTools/usr/include/c++/v1/vector"
 
 
 
@@ -15,7 +14,9 @@ class TSPOrganism : public practical::ga::Organism {
 public:
     void init(unsigned int initial_size) {
 
+
         int genesSize = tsp::Cities::instance().getCities().size();
+        std::cout << genesSize << std::endl;
         std::vector<practical::ga::IntGene> genes;
         std::vector<practical::ga::IntGene> shuffleGene;
 

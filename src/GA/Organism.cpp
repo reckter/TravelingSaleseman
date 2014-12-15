@@ -114,13 +114,7 @@ std::pair<Genome*, Genome*> Organism::selectParents() {
 
 Genome* Organism::getRandomGenome() {
 	int rand = util::randInt((int) genomes.size());
-	std::deque<Genome*>::iterator pointer = genomes.begin();
-	for(int i = 0; i < genomes.size(); i++) {
-		pointer++;
-		if(i == rand) {
-			return *pointer;
-		}
-	}
+	return *(genomes.begin() + rand);
 }
 
 void Organism::sort() {
