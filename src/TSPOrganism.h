@@ -30,14 +30,25 @@ public:
             shuffleGene.clear();
             for(int j = 0; j < genesSize; j++) {
                 int rand = practical::ga::util::randInt(genes.size());
-                shuffleGene.push_back(genes[i]);
-                genes.erase(genes.begin() + i);
+                shuffleGene.push_back(genes[rand]);
+                genes.erase(genes.begin() + rand);
             }
 
             genome->getGenes() = shuffleGene;
             this->genomes.push_back(genome);
             genes = shuffleGene;
             shuffleGene.clear();
+        }
+
+        std::string delim("");
+        for(std::deque<practical::ga::Genome*>::iterator i = this->genomes.begin(); i < this->genomes.end(); i++) {
+            std::cout << "[";
+            delim = "";
+            for(std::vector<practical::ga::IntGene>::const_iterator j = (*i)->getGenes().begin(); j < (*i)->getGenes().end(); j++) {
+                std::cout << delim << j->getValue();
+                delim = ", ";
+            }
+            std::cout << "]" << std::endl;
         }
     }
 };
